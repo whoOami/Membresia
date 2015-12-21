@@ -12,8 +12,8 @@ angular.module('app')
 
       // config
       $scope.app = {
-        name: 'Angulr',
-        version: '2.1.0',
+        name: 'Membresia',
+        version: '0.5',
         // for chart colors
         color: {
           primary: '#7266ba',
