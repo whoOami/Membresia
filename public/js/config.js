@@ -1,18 +1,11 @@
-// config
-
+// Config...
 var app =  
 angular.module('app')
-/*
     .config(function($authProvider) {
-        // Parametros de configuración
-        $authProvider.loginUrl = "http://45.55.241.248:81/auth/login";
-        $authProvider.signupUrl = "http://api.com/auth/signup";
-        $authProvider.tokenName = "token";
-        $authProvider.tokenPrefix = "myApp";
+        // Parametros de configuración Satellizer
+        $authProvider.baseUrl = './';
     })
-*/
-  .config(
-    [        '$controllerProvider', '$compileProvider', '$filterProvider', '$provide',
+  .config(['$controllerProvider', '$compileProvider', '$filterProvider', '$provide',
     function ($controllerProvider,   $compileProvider,   $filterProvider,   $provide) {
         
         // lazy controller, directive and service
