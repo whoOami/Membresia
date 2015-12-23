@@ -3,3 +3,8 @@
 .env.php
 .env
 composer.lock
+.*
+vendor
+!.git
+!.gitignore
+!.env.example
