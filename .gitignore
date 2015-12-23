@@ -3,7 +3,7 @@
 .env.php
 .env
 composer.lock
-.*
+*.swp
 vendor
 !.git
 !.gitignore
