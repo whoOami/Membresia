@@ -26,7 +26,7 @@ else
 	fi
 fi
 echo "Activando módulos de php"
-sudo a2enmod mcypt
+sudo php5enmod mcrypt
 sudo a2enmod rewrite
 echo "Configurando permisos de directorios"
 sudo chmod 777 -R vendor/
