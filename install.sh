@@ -7,7 +7,11 @@ else
 		./composer.phar update
 	else
 		echo "Composer no encontrado, descargando composer"
-		curl -sS https://getcomposer.org/installer | php
+		if [ -f /usr/bin/curl ]; then
+			curl -sS https://getcomposer.org/installer | php
+		else 
+			php -r "readfile('https://getcomposer.org/installer');" | php
+		fi
 		echo "Actualizando dependencias."
 		./composer.phar update
 		echo "¿Desea instalar Composer permanentemente en su sistema? [S/N]";
@@ -21,6 +25,9 @@ else
 		fi
 	fi
 fi
+echo "Activando módulos de php"
+sudo a2enmod mcypt
+sudo a2enmod rewrite
 echo "Configurando permisos de directorios"
 sudo chmod 777 -R vendor/
 sudo chmod 777 -R storage/
