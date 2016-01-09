@@ -44,3 +44,4 @@ echo "Configurando permisos de directorios"
 sudo chmod 777 -R vendor/
 sudo chmod 777 -R storage/
 sudo chmod 777 -R bootstrap/cache/
+sudo service apache2 restart
