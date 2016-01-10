@@ -59,6 +59,7 @@ bootbox.dialog({
 						    group.name = $scope.checkItem(group, $scope.groups, 'name');
 							$http.post('groups?name='+group.name+'&type='+group.type).then(function (resp) {
 								if (resp.data.msg=='Success'){
+  									getGroups();
 				          			toaster.pop('success','Grupo creado correctamente');
 						    		$scope.groups.push(group);
 								}else{
