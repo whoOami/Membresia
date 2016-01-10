@@ -1,0 +1,69 @@
+<div class="modal-header">
+    <h3 class="modal-title">Modal!</h3>
+</div>
+<div class="modal-body">
+    <ul>
+        <li ng-repeat="item in items">
+            <a ng-click="selected.item = item">{{ item }}</a>
+        </li>
+    </ul>
+    Selected: <b>{{ selected.item }}</b>
+</div>
+<div class="modal-footer">                  
+    <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+</div>
+<!--<div class="row">
+	<div class="col-md-12">
+		<form class="form-horizontal">
+            <div class="form-group">
+            	<label class="col-md-4 control-label" for="name">Nombre</label>
+                <div class="col-md-4">
+                	<input id="name" name="name" type="text" placeholder="Nombre del grupo" class="form-control input-md" required>
+                </div>
+            </div>
+            <div class="form-group">
+            	<label class="col-md-4 control-label" for="awesomeness">¿Qué tipo de grupo va a crear?</label> 
+                <div class="col-md-4">
+					<div class="radio">
+						<label for="awesomeness-0">
+                   			<input type="radio" name="awesomeness" id="awesomeness-0" value="0" checked="checked">
+                   			<i class="icon-moustache"></i> Departamento
+						</label>
+                   	</div>
+					<div class="radio">
+						<label for="awesomeness-1">
+                   			<input type="radio" name="awesomeness" id="awesomeness-1" value="1">
+    						<i class="fa fa-child"></i> Grupo escuela dominical
+						</label>
+                   	</div>
+                </div>
+			</div>
+            </form>
+	</div>
+</div>-->
+                <!--buttons: {
+                    success: {
+                        label: "Save",
+                        className: "btn-success",
+                        callback: function () {
+                            var name = $('#name').val();
+                            var answer = $("input[name='awesomeness']:checked").val()
+				    		var group = {name: name, type: answer};
+						    group.name = $scope.checkItem(group, $scope.groups, 'name');
+							$http.post('groups?name='+group.name+'&type='+group.type).then(function (resp) {
+								if (resp.data.msg=='Success'){
+  									getGroups();
+				          			toaster.pop('success','Grupo creado correctamente');
+						    		$scope.groups.push(group);
+								}else{
+				          			toaster.pop('error','Error al actualizar, por favor vuelva a intentarlo');
+								}
+							},function(resp){
+								toaster.pop('error','Error',"Falla en la comunicación con el servidor");
+							});
+                        }
+                    }
+                }
+            }
+        );-->
