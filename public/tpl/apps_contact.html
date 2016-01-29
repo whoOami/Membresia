@@ -28,6 +28,13 @@
       </div>
       <div class="wrapper b-t">
         <span tooltip="Doble click para editar" class="pull-right text-muted inline wrapper-xs m-r-sm"><i class="fa fa-question"></i></span>
+        <span ng-controller="ModalDemoCtrl">
+          <script type="text/ng-template" id="myModalContent.html">
+            <div ng-include="'tpl/apps_contact_newGroup.html'"></div>
+          </script>
+          <!--<button class="btn btn-success" ng-click="open('lg')">Form in a modal</button>-->
+		  <a href class="btn btn-sm btn-default" ng-click="open('lg')"><i class="fa fa-plus fa-fw m-r-xs"></i> Nuevo Grupo </a>
+        </span>
         <a href class="btn btn-sm btn-default" ng-click="createGroup()"><i class="fa fa-plus fa-fw m-r-xs"></i> Nuevo Grupo</a>
       </div>
     </div>
